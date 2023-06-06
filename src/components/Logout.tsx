@@ -18,7 +18,7 @@ const Logout = () => {
       setUser(null)
       navigate("/")
     } catch (error) {
-      console.error("Error during logout:", error)
+      console.log("Error during logout:", error)
     }
   }
 

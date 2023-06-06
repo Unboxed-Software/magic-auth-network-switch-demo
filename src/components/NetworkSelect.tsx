@@ -26,7 +26,6 @@ const NetworkSelect = () => {
       localStorage.setItem("network", networkOption)
       // Update the selected network in the context
       updateMagicNetwork(networkOption)
-      console.log("SELECTED NETWORK: ", networkOption)
     }
   }
 

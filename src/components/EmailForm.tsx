@@ -34,7 +34,6 @@ const EmailForm = () => {
       await fetchUserInfo()
       navigate("/dashboard")
     } catch (error) {
-      console.log(error)
       setEmail("")
     }
   }
@@ -53,7 +52,7 @@ const EmailForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </InputGroup>
-      <Button onClick={handleLoginWithEmail}>Send Link</Button>
+      <Button onClick={handleLoginWithEmail}>Submit</Button>
     </VStack>
   )
 }

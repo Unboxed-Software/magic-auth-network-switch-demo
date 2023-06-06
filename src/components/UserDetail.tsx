@@ -29,7 +29,7 @@ const UserDetails = () => {
           setUser(newUser)
         }
       } catch (error) {
-        console.error("Error fetching balance: ", error)
+        console.log("Error fetching balance: ", error)
       }
     }
 

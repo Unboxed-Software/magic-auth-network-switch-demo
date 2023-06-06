@@ -43,7 +43,6 @@ export const NetworkProvider = ({
     const magicNetwork = MagicNetwork.create(network)
     setMagicNetwork(magicNetwork)
     setSelectedNetwork(network)
-    console.log(magicNetwork)
   }, [])
 
   useEffect(() => {

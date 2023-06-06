@@ -37,12 +37,10 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     try {
       if (network) {
         const userInfo = await network.getInfo()
-        console.log("USER INFO: ", userInfo)
-        console.log("UserInfo:", JSON.stringify(userInfo, null, 2))
         setUser(userInfo)
       }
     } catch (error) {
-      console.log(error)
+      console.log("Error fetching userInfo: ", error)
     }
   }, [network])
 
@@ -52,7 +50,6 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
     // Check if user is logged in
     const checkLoggedInStatus = async () => {
       const loggedIn = await network.isLoggedIn()
-      console.log("LOGGED IN: ", loggedIn)
       if (loggedIn) {
         // If logged in, fetch user info
         await fetchUserInfo()
